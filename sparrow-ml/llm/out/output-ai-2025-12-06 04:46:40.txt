@@ -1,0 +1,4 @@
+--------------------------------
+--- Sparrow LLM Engine Launcher ---
+--------------------------------
+Detected Python version: Python 3.12.11

@@ -1,0 +1,26 @@
+--------------------------------
+--- Sparrow LLM Engine Launcher ---
+--------------------------------
+Detected Python version: Python 3.12.11
+
+Running pipeline with sparrow-parse
+
+Preparing query and schema
+[2025-12-06 04:49:22] Executing query
+Ollama initialized for model: qwen3-vl:30b-a3b-instruct-q8_0
+Input data:
+[
+    {
+        'file_path': 'data-atez/eFatura.pdf',
+        'text_input': 'retrieve data based on provided JSON schema. return response in JSON format, by strictly following this JSON schema: [  {    "invoice_currency": 
+"str or null",    "invoice_customer_address": "str or null",    "invoice_customer_country": "str or null",    "invoice_customer_name": "str or null",    "invoice_date": 
+"str or null",    "invoice_delivery_term": "str or null",    "invoice_id": "str or null",    "invoice_payment_term": "str or null",    "invoice_po_number": "str or 
+null",    "invoice_shipment_country_of_origin": "str or null",    "invoice_supplier_address": "str or null",    "invoice_supplier_country": "str or null",    
+"invoice_supplier_name": "str or null",    "invoice_supplier_vkn": "str or null",    "invoice_total_amount": "str or null",    "invoice_total_package_quantity": "str or 
+null",    "invoice_total_quantity": "str or null",    "invoice_total_gross_weight": "str or null",    "invoice_total_net_weight": "str or null",    "items": [      {    
+"invoice_item_commodity_code": "str or null",        "invoice_item_country_of_origin": "str or null",        "invoice_item_description": "str or null",        
+"invoice_item_no": "str or null",        "invoice_item_package_quantity": "str or null",        "invoice_item_product_id": "str or null",        "invoice_item_quantity":
+"str or null",        "invoice_item_total_amount": "str or null",        "invoice_item_unit_price": "str or null",        "invoice_item_unit_type": "str or null"      } 
+]  }]. If a field is not visible or cannot be found in the document, return null. Do not guess, infer, or generate values for missing fields.'
+    }
+]
