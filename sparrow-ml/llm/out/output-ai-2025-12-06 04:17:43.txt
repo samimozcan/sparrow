@@ -1,0 +1,92 @@
+--------------------------------
+--- Sparrow LLM Engine Launcher ---
+--------------------------------
+Detected Python version: Python 3.12.11
+
+Running pipeline with sparrow-parse
+
+Preparing query and schema
+[2025-12-06 04:17:44] Executing query
+Ollama initialized for model: qwen3-vl:30b-a3b-instruct-q8_0
+Input data:
+[
+    {
+        'file_path': 'data-atez/eFatura.pdf',
+        'text_input': 'retrieve data based on provided JSON schema. return 
+response in JSON format, by strictly following this JSON schema: 
+[{"invoice_currency":"str or null","invoice_customer_address":"str or 
+null","invoice_customer_country":"str or null","invoice_customer_name":"str or 
+null","invoice_date":"str or null","invoice_delivery_term":"str or 
+null","invoice_id":"str or null","invoice_payment_term":"str or 
+null","invoice_po_number":"str or 
+null","invoice_shipment_country_of_origin":"str or 
+null","invoice_supplier_address":"str or null","invoice_supplier_country":"str 
+or null","invoice_supplier_name":"str or null","invoice_supplier_vkn":"str or 
+null","invoice_total_amount":"str or null","invoice_total_package_quantity":"str
+or null","invoice_total_quantity":"str or 
+null","invoice_total_gross_weight":"str or null","invoice_total_net_weight":"str
+or null","items":[{"invoice_item_commodity_code":"str or 
+null","invoice_item_country_of_origin":"str or 
+null","invoice_item_description":"str or null","invoice_item_no":"str or 
+null","invoice_item_package_quantity":"str or 
+null","invoice_item_product_id":"str or null","invoice_item_quantity":"str or 
+null","invoice_item_total_amount":"str or null","invoice_item_unit_price":"str 
+or null","invoice_item_unit_type":"str or null"}]}]. If a field is not visible 
+or cannot be found in the document, return null. Do not guess, infer, or 
+generate values for missing fields.'
+    }
+]
+Processing 1 pages for inference at once.
+Processing precision data...
+Failed to parse JSON: Expecting ',' delimiter: line 34 column 2 (char 1408)
+Inference completed successfully for: /tmp/tmpw43uxt65/eFatura_page_1.jpg
+Validating result
+Validation failed:
+- Errors: Invalid JSON format. Could not parse the input JSON.
+- Output: ```json
+[
+        {"invoice_currency": "EUR",
+        "invoice_customer_address": "Pratzschwitzer Str. 201, 01796 Pirna /P 
+Germany",
+        "invoice_customer_country": "Germany",
+        "invoice_customer_name": "Verzahnung & Metallbearbeitung Kaiser GmbH",
+        "invoice_date": "31-10-2025",
+        "invoice_delivery_term": "DAP",
+        "invoice_id": "DKE2025000000035",
+        "invoice_payment_term": "30 DAYS",
+        "invoice_po_number": "741129000000",
+        "invoice_shipment_country_of_origin": "Germany",
+        "invoice_supplier_address": "Dikkan Diş Ticaret A.S. , 
+Tic.Sic.133672-K-11152, Mersis No:0296040107900019 Izmır Kernalpaşa Yolu, 
+Hayıtkırınevki No:30 No: 35730 Kernalpaşa - Izmır/ Izmır",
+        "invoice_supplier_country": "Turkey",
+        "invoice_supplier_name": "Dikkan",
+        "invoice_supplier_vkn": "2960401079",
+        "invoice_total_amount": "13,350.00 EUR",
+        "invoice_total_package_quantity": "1 Crate",
+        "invoice_total_quantity": "1,109 kg",
+        "invoice_total_gross_weight": "1170.0 kgs",
+        "invoice_total_net_weight": "1109.0 kgs",
+        "items": [
+                {"invoice_item_commodity_code": "741129000000",
+                        "invoice_item_country_of_origin": "Germany",
+                        "invoice_item_description": "BRONZ BORU",
+                        "invoice_item_no": "1",
+                        "invoice_item_package_quantity": "1",
+                        "invoice_item_product_id": "741129000000",
+                        "invoice_item_quantity": "1,109",
+                        "invoice_item_total_amount": "13,350.00 EUR",
+                        "invoice_item_unit_price": "13,350.00 EUR",
+                        "invoice_item_unit_type": "kg"
+                }
+        ]
+}
+```
+Time to retrieve answer: 10.87853662398993
+
+Sparrow response:
+
+{
+    "message": "Invalid JSON format in LLM output",
+    "valid": "Invalid JSON format. Could not parse the input JSON."
+}

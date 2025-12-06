@@ -1,0 +1,40 @@
+--------------------------------
+--- Sparrow LLM Engine Launcher ---
+--------------------------------
+Detected Python version: Python 3.12.11
+
+Running pipeline with sparrow-parse
+
+Preparing query and schema
+[2025-12-06 04:16:44] Executing query
+Ollama initialized for model: qwen3-vl:30b-a3b-instruct-q8_0
+Input data:
+[
+    {
+        'file_path': 'data-atez/eFatura.pdf',
+        'text_input': 'retrieve data based on provided JSON schema. return 
+response in JSON format, by strictly following this JSON schema: 
+[{"invoice_currency":"strornull","invoice_customer_address":"strornull","invoice
+_customer_country":"strornull","invoice_customer_name":"strornull","invoice_date
+":"strornull","invoice_delivery_term":"strornull","invoice_id":"strornull","invo
+ice_payment_term":"strornull","invoice_po_number":"strornull","invoice_shipment_
+country_of_origin":"strornull","invoice_supplier_address":"strornull","invoice_s
+upplier_country":"strornull","invoice_supplier_name":"strornull","invoice_suppli
+er_vkn":"strornull","invoice_total_amount":"strornull","invoice_total_package_qu
+antity":"strornull","invoice_total_quantity":"strornull","invoice_total_gross_we
+ight":"strornull","invoice_total_net_weight":"strornull","items":[{"invoice_item
+_commodity_code":"strornull","invoice_item_country_of_origin":"strornull","invoi
+ce_item_description":"strornull","invoice_item_no":"strornull","invoice_item_pac
+kage_quantity":"strornull","invoice_item_product_id":"strornull","invoice_item_q
+uantity":"strornull","invoice_item_total_amount":"strornull","invoice_item_unit_
+price":"strornull","invoice_item_unit_type":"strornull"}]}]. If a field is not 
+visible or cannot be found in the document, return null. Do not guess, infer, or
+generate values for missing fields.'
+    }
+]
+Processing 1 pages for inference at once.
+Processing precision data...
+Inference completed successfully for: /tmp/tmp0zy0953g/eFatura_page_1.jpg
+Validating result
+Caught an exception: Unsupported type: strornull. Supported types are: int, str,
+float, int or null, str or null, float or null, 0 or null, 0.0 or null

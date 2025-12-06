@@ -1,0 +1,11 @@
+--------------------------------
+--- Sparrow LLM Engine Launcher ---
+--------------------------------
+Detected Python version: Python 3.12.11
+
+Running pipeline with sparrow-parse
+
+Preparing query and schema
+JSONDecodeError: Expecting value: line 1 column 2 (char 1)
+Caught an exception: Error preparing query: Invalid query. Please provide a 
+valid JSON query.
