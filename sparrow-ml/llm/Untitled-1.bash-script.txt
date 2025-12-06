@@ -1,0 +1,34 @@
+./sparrow.sh "*" \
+  --pipeline "sparrow-parse" \
+  --debug \
+  --options ollama \
+  --options qwen3-vl:30b-a3b-instruct-q8_0 \
+  --file-path "data-atez/eFatura.pdf" 
+
+  ./sparrow.sh "*" \
+  --page-type invoice \
+  --page-type table \
+  --pipeline "sparrow-parse" \
+  --debug \
+  --options ollama \
+  --options qwen3-vl:30b-a3b-instruct-q8_0 \
+  --file-path "data-atez/eFatura.pdf" 
+
+   ./sparrow.sh "*" \
+  --page-type e-invoice \
+  --page-type ATR \
+  --pipeline "sparrow-parse" \
+  --debug \
+  --options ollama \
+  --options qwen3-vl:30b-a3b-instruct-q8_0 \
+  --file-path "data-atez/20250917_091526_ATR.pdf" 
+
+    ./sparrow.sh "*" \
+  --page-type e-invoice \
+  --page-type ATR \
+  --page-type tr_export_declaration \
+  --pipeline "sparrow-parse" \
+  --debug \
+  --options ollama \
+  --options qwen3-vl:30b-a3b-instruct-q8_0 \
+  --file-path "data-atez/20250922_081238_Ausfuhr.pdf" 

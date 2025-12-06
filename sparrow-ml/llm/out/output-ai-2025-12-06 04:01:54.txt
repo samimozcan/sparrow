@@ -1,0 +1,27 @@
+--------------------------------
+--- Sparrow LLM Engine Launcher ---
+--------------------------------
+Detected Python version: Python 3.12.11
+
+Running pipeline with sparrow-parse
+
+Preparing page type query
+[2025-12-06 04:01:54] Executing query
+Ollama initialized for model: qwen3-vl:30b-a3b-instruct-q8_0
+Input data:
+[
+    {
+        'file_path': 'data-atez/20250922_081238_Ausfuhr.pdf',
+        'text_input': 'detect page type based on this list of types - e-invoice,
+ATR, tr_export_declaration. return response in JSON format'
+    }
+]
+Processing 1 pages for inference at once.
+Inference completed successfully for: /tmp/tmpbibu4eth/20250922_081238_Ausfuhr_page_1.jpg
+Time to retrieve answer: 7.310549246001756
+
+Sparrow response:
+
+{
+  "page_type": "e-invoice"
+}
