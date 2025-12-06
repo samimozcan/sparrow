@@ -1,0 +1,1642 @@
+--------------------------------
+--- Sparrow LLM Engine Launcher ---
+--------------------------------
+Detected Python version: Python 3.12.11
+
+Running pipeline with sparrow-parse
+
+Preparing query and schema
+[2025-12-06 04:28:25] Executing query
+Ollama initialized for model: qwen3-vl:30b-a3b-instruct-q8_0
+Input data:
+[
+    {
+        'file_path': 'data-atez/DENİZ 0613 çoklu fatura.pdf',
+        'text_input': 'retrieve data based on provided JSON schema. return 
+response in JSON format, by strictly following this JSON schema: [  {    
+"invoice_currency": "str or null",    "invoice_customer_address": "str or null",
+"invoice_customer_country": "str or null",    "invoice_customer_name": "str or 
+null",    "invoice_date": "str or null",    "invoice_delivery_term": "str or 
+null",    "invoice_id": "str or null",    "invoice_payment_term": "str or null",
+"invoice_po_number": "str or null",    "invoice_shipment_country_of_origin": 
+"str or null",    "invoice_supplier_address": "str or null",    
+"invoice_supplier_country": "str or null",    "invoice_supplier_name": "str or 
+null",    "invoice_supplier_vkn": "str or null",    "invoice_total_amount": "str
+or null",    "invoice_total_package_quantity": "str or null",    
+"invoice_total_quantity": "str or null",    "invoice_total_gross_weight": "str 
+or null",    "invoice_total_net_weight": "str or null",    "items": [      {    
+"invoice_item_commodity_code": "str or null",        
+"invoice_item_country_of_origin": "str or null",        
+"invoice_item_description": "str or null",        "invoice_item_no": "str or 
+null",        "invoice_item_package_quantity": "str or null",        
+"invoice_item_product_id": "str or null",        "invoice_item_quantity": "str 
+or null",        "invoice_item_total_amount": "str or null",        
+"invoice_item_unit_price": "str or null",        "invoice_item_unit_type": "str 
+or null"      }    ]  }]. If a field is not visible or cannot be found in the 
+document, return null. Do not guess, infer, or generate values for missing 
+fields.'
+    }
+]
+Processing 8 pages for inference at once.
+Processing precision data...
+Inference completed successfully for: /tmp/tmp5dys9b5k/DENİZ 0613 çoklu fatura_page_1.jpg
+Processing precision data...
+Inference completed successfully for: /tmp/tmp5dys9b5k/DENİZ 0613 çoklu fatura_page_2.jpg
+Processing precision data...
+Inference completed successfully for: /tmp/tmp5dys9b5k/DENİZ 0613 çoklu fatura_page_3.jpg
+Processing precision data...
+Inference completed successfully for: /tmp/tmp5dys9b5k/DENİZ 0613 çoklu fatura_page_4.jpg
+Processing precision data...
+Inference completed successfully for: /tmp/tmp5dys9b5k/DENİZ 0613 çoklu fatura_page_5.jpg
+Processing precision data...
+Inference completed successfully for: /tmp/tmp5dys9b5k/DENİZ 0613 çoklu fatura_page_6.jpg
+Processing precision data...
+Inference completed successfully for: /tmp/tmp5dys9b5k/DENİZ 0613 çoklu fatura_page_7.jpg
+Processing precision data...
+Inference completed successfully for: /tmp/tmp5dys9b5k/DENİZ 0613 çoklu fatura_page_8.jpg
+Validating result for page 1...
+Validation passed. LLM output conforms to the schema.
+Validating result for page 2...
+Validation passed. LLM output conforms to the schema.
+Validating result for page 3...
+Validation passed. LLM output conforms to the schema.
+Validating result for page 4...
+Validation passed. LLM output conforms to the schema.
+Validating result for page 5...
+Validation passed. LLM output conforms to the schema.
+Validating result for page 6...
+Validation passed. LLM output conforms to the schema.
+Validating result for page 7...
+Validation passed. LLM output conforms to the schema.
+Validating result for page 8...
+Validation passed. LLM output conforms to the schema.
+Time to retrieve answer: 159.77489462000085
+
+Sparrow response:
+
+[
+    {
+        "data": [
+            {
+                "invoice_currency": "EUR",
+                "invoice_customer_address": "Abkhazia/Georgia, Sukhum, 57 
+Kogoniya St GURCISTAN Sohum 34000 Gürcistan",
+                "invoice_customer_country": "Georgia",
+                "invoice_customer_name": "INDIVIDUAL ENTREPRENEUR (IE) DZHOPUA 
+R.A",
+                "invoice_date": "30.04.2025",
+                "invoice_delivery_term": "TR1.2",
+                "invoice_id": "EXP2025000000363",
+                "invoice_payment_term": "ISTISNA",
+                "invoice_po_number": "7280059048",
+                "invoice_shipment_country_of_origin": "Türkiye",
+                "invoice_supplier_address": "Küstepe Mah. Mecidiyeköy Yolu Cad. 
+Trump Tower Blok No : 12 Ic Kapi No : 488 No:12 34387 Şişli/istanbul",
+                "invoice_supplier_country": "Turkey",
+                "invoice_supplier_name": "Penti",
+                "invoice_supplier_vkn": "7280059048",
+                "invoice_total_amount": "2464,29EUR",
+                "invoice_total_package_quantity": "32,00",
+                "invoice_total_quantity": "32,00",
+                "invoice_total_gross_weight": null,
+                "invoice_total_net_weight": null,
+                "items": [
+                    {
+                        "invoice_item_commodity_code": "420232909000",
+                        "invoice_item_country_of_origin": "Türkiye",
+                        "invoice_item_description": "LEOPAR MAKYAJ CANTASI",
+                        "invoice_item_no": "1",
+                        "invoice_item_package_quantity": "18,00",
+                        "invoice_item_product_id": "PY27ULX125IY",
+                        "invoice_item_quantity": "18,00",
+                        "invoice_item_total_amount": "68,21EUR",
+                        "invoice_item_unit_price": "4,21EUR",
+                        "invoice_item_unit_type": "Adet"
+                    },
+                    {
+                        "invoice_item_commodity_code": "420232909000",
+                        "invoice_item_country_of_origin": "Türkiye",
+                        "invoice_item_description": "CLOVE MAKYAJ CANTASI",
+                        "invoice_item_no": "2",
+                        "invoice_item_package_quantity": "28,00",
+                        "invoice_item_product_id": "PY6VSXL25IY",
+                        "invoice_item_quantity": "28,00",
+                        "invoice_item_total_amount": "159,27EUR",
+                        "invoice_item_unit_price": "6,32EUR",
+                        "invoice_item_unit_type": "Adet"
+                    },
+                    {
+                        "invoice_item_commodity_code": "420232909000",
+                        "invoice_item_country_of_origin": "Türkiye",
+                        "invoice_item_description": "DELLA MAKYAJ CANTASI",
+                        "invoice_item_no": "3",
+                        "invoice_item_package_quantity": "28,00",
+                        "invoice_item_product_id": "PY85063125IY",
+                        "invoice_item_quantity": "28,00",
+                        "invoice_item_total_amount": "159,25EUR",
+                        "invoice_item_unit_price": "6,32EUR",
+                        "invoice_item_unit_type": "Adet"
+                    },
+                    {
+                        "invoice_item_commodity_code": "610463000000",
+                        "invoice_item_country_of_origin": "Türkiye",
+                        "invoice_item_description": "FOLDED DENIZ SORTU",
+                        "invoice_item_no": "4",
+                        "invoice_item_package_quantity": "36,00",
+                        "invoice_item_product_id": "PL41Q7FM25IY",
+                        "invoice_item_quantity": "36,00",
+                        "invoice_item_total_amount": "227,28EUR",
+                        "invoice_item_unit_price": "8,42EUR",
+                        "invoice_item_unit_type": "Adet"
+                    },
+                    {
+                        "invoice_item_commodity_code": "610469000092",
+                        "invoice_item_country_of_origin": "Türkiye",
+                        "invoice_item_description": "MOEVA TULUM",
+                        "invoice_item_no": "5",
+                        "invoice_item_package_quantity": "33,00",
+                        "invoice_item_product_id": "PLFPKDR725IY",
+                        "invoice_item_quantity": "33,00",
+                        "invoice_item_total_amount": "660,61EUR",
+                        "invoice_item_unit_price": "26,67EUR",
+                        "invoice_item_unit_type": "Adet"
+                    },
+                    {
+                        "invoice_item_commodity_code": "610831000000",
+                        "invoice_item_country_of_origin": "Mısır",
+                        "invoice_item_description": "LIVE LOVE LOCAL SS SORT 
+SET",
+                        "invoice_item_no": "6",
+                        "invoice_item_package_quantity": "26,00",
+                        "invoice_item_product_id": "PNL97TWF25IY",
+                        "invoice_item_quantity": "26,00",
+                        "invoice_item_total_amount": "190,51EUR",
+                        "invoice_item_unit_price": "8,42EUR",
+                        "invoice_item_unit_type": "Adet"
+                    },
+                    {
+                        "invoice_item_commodity_code": "610831000000",
+                        "invoice_item_country_of_origin": "Türkiye",
+                        "invoice_item_description": "SUMMER TIME SS GÖMLEK SORT 
+SET",
+                        "invoice_item_no": "7",
+                        "invoice_item_package_quantity": "34,00",
+                        "invoice_item_product_id": "PNW2HFQW25IY",
+                        "invoice_item_quantity": "34,00",
+                        "invoice_item_total_amount": "342,52EUR",
+                        "invoice_item_unit_price": "11,58EUR",
+                        "invoice_item_unit_type": "Adet"
+                    },
+                    {
+                        "invoice_item_commodity_code": "610831000000",
+                        "invoice_item_country_of_origin": "Türkiye",
+                        "invoice_item_description": "CHILL DAY ATLET",
+                        "invoice_item_no": "8",
+                        "invoice_item_package_quantity": "2,00",
+                        "invoice_item_product_id": "PNZZ1KFS25IY",
+                        "invoice_item_quantity": "2,00",
+                        "invoice_item_total_amount": "17,05EUR",
+                        "invoice_item_unit_price": "9,47EUR",
+                        "invoice_item_unit_type": "Adet"
+                    },
+                    {
+                        "invoice_item_commodity_code": "611241900000",
+                        "invoice_item_country_of_origin": "Türkiye",
+                        "invoice_item_description": "ZIGZAG MACRAME BOTTOM",
+                        "invoice_item_no": "9",
+                        "invoice_item_package_quantity": "32,00",
+                        "invoice_item_product_id": "PL07RU9V25IY",
+                        "invoice_item_quantity": "32,00",
+                        "invoice_item_total_amount": "269,44EUR",
+                        "invoice_item_unit_price": "11,23EUR",
+                        "invoice_item_unit_type": "Adet"
+                    },
+                    {
+                        "invoice_item_commodity_code": "611241900000",
+                        "invoice_item_country_of_origin": "Türkiye",
+                        "invoice_item_description": "MISTY U BALEN CORSET SUIT",
+                        "invoice_item_no": "10",
+                        "invoice_item_package_quantity": "35,00",
+                        "invoice_item_product_id": "PLOG7NV725IY",
+                        "invoice_item_quantity": "35,00",
+                        "invoice_item_total_amount": "688,05EUR",
+                        "invoice_item_unit_price": "28,07EUR",
+                        "invoice_item_unit_type": "Adet"
+                    },
+                    {
+                        "invoice_item_commodity_code": "611241900000",
+                        "invoice_item_country_of_origin": "Türkiye",
+                        "invoice_item_description": "JESSI SIDE BOTTOM",
+                        "invoice_item_no": "11",
+                        "invoice_item_package_quantity": "20,00",
+                        "invoice_item_product_id": "PL11XJ525IY",
+                        "invoice_item_quantity": "20,00",
+                        "invoice_item_total_amount": "252,85EUR",
+                        "invoice_item_unit_price": "16,84EUR",
+                        "invoice_item_unit_type": "Adet"
+                    },
+                    {
+                        "invoice_item_commodity_code": "611241900000",
+                        "invoice_item_country_of_origin": "Türkiye",
+                        "invoice_item_description": "GINA EXTRA SUPER BOTTOM",
+                        "invoice_item_no": "12",
+                        "invoice_item_package_quantity": "35,00",
+                        "invoice_item_product_id": "PL2AAW9725IY",
+                        "invoice_item_quantity": "35,00",
+                        "invoice_item_total_amount": "220,98EUR",
+                        "invoice_item_unit_price": "8,42EUR",
+                        "invoice_item_unit_type": "Adet"
+                    },
+                    {
+                        "invoice_item_commodity_code": "611241900000",
+                        "invoice_item_country_of_origin": "Bulgarian",
+                        "invoice_item_description": "MARBEL SUIT",
+                        "invoice_item_no": "13",
+                        "invoice_item_package_quantity": "30,00",
+                        "invoice_item_product_id": "PL3FW4MU25IY",
+                        "invoice_item_quantity": "30,00",
+                        "invoice_item_total_amount": "412,60EUR",
+                        "invoice_item_unit_price": "19,65EUR",
+                        "invoice_item_unit_type": "Adet"
+                    },
+                    {
+                        "invoice_item_commodity_code": "611241900000",
+                        "invoice_item_country_of_origin": "Türkiye",
+                        "invoice_item_description": "SHIRRED SUIT",
+                        "invoice_item_no": "14",
+                        "invoice_item_package_quantity": "28,00",
+                        "invoice_item_product_id": "PL91AWRR25IY",
+                        "invoice_item_quantity": "28,00",
+                        "invoice_item_total_amount": "412,65EUR",
+                        "invoice_item_unit_price": "19,65EUR",
+                        "invoice_item_unit_type": "Adet"
+                    },
+                    {
+                        "invoice_item_commodity_code": "611241900000",
+                        "invoice_item_country_of_origin": "Bulgarian",
+                        "invoice_item_description": "V TOP",
+                        "invoice_item_no": "15",
+                        "invoice_item_package_quantity": "30,00",
+                        "invoice_item_product_id": "PLBFZ66K25IY",
+                        "invoice_item_quantity": "30,00",
+                        "invoice_item_total_amount": "347,47EUR",
+                        "invoice_item_unit_price": "15,44EUR",
+                        "invoice_item_unit_type": "Adet"
+                    }
+                ]
+            }
+        ],
+        "valid": "true",
+        "page": 1
+    },
+    {
+        "data": [
+            {
+                "invoice_currency": "EUR",
+                "invoice_customer_address": "Abkhazia/Georgia, Sukhum, 57 
+Kogoniya St GURCISTAN Sohum 34000 Gürcistan",
+                "invoice_customer_country": "Georgia",
+                "invoice_customer_name": "INDIVIDUAL ENTREPRENEUR (IE) DZHOPUA 
+R.A",
+                "invoice_date": "2025-02-04",
+                "invoice_delivery_term": "TR1.2",
+                "invoice_id": "EXP2025000000363",
+                "invoice_payment_term": "IHRACAT",
+                "invoice_po_number": "2025-02-04",
+                "invoice_shipment_country_of_origin": "Turkey",
+                "invoice_supplier_address": "Üniversiteler Mahallesi Dumlupınar 
+Bulvarı No:51 Çankaya/Ankara",
+                "invoice_supplier_country": "Turkey",
+                "invoice_supplier_name": "GÜMRÜK VE TİCARET BAKANLIĞI",
+                "invoice_supplier_vkn": "1460415308",
+                "invoice_total_amount": "1343,79EUR",
+                "invoice_total_package_quantity": "300",
+                "invoice_total_quantity": "208,00",
+                "invoice_total_gross_weight": "208,00",
+                "invoice_total_net_weight": "208,00",
+                "items": [
+                    {
+                        "invoice_item_commodity_code": "611241900000",
+                        "invoice_item_country_of_origin": "Turkey",
+                        "invoice_item_description": "Gina Triangle Fit Top",
+                        "invoice_item_no": "16",
+                        "invoice_item_package_quantity": "40,00",
+                        "invoice_item_product_id": "PLBJ6A5P25IY",
+                        "invoice_item_quantity": "40,00",
+                        "invoice_item_total_amount": "112,35EUR",
+                        "invoice_item_unit_price": "11,23EUR",
+                        "invoice_item_unit_type": "Adet"
+                    },
+                    {
+                        "invoice_item_commodity_code": "611241900000",
+                        "invoice_item_country_of_origin": "Turkey",
+                        "invoice_item_description": "Zigzag Bra Top",
+                        "invoice_item_no": "17",
+                        "invoice_item_package_quantity": "20,00",
+                        "invoice_item_product_id": "PLBKJR0525IY",
+                        "invoice_item_quantity": "20,00",
+                        "invoice_item_total_amount": "63,20EUR",
+                        "invoice_item_unit_price": "12,63EUR",
+                        "invoice_item_unit_type": "Adet"
+                    },
+                    {
+                        "invoice_item_commodity_code": "611241900000",
+                        "invoice_item_country_of_origin": "Turkey",
+                        "invoice_item_description": "Sport Suit",
+                        "invoice_item_no": "18",
+                        "invoice_item_package_quantity": "8,00",
+                        "invoice_item_product_id": "PLELBHV825IY",
+                        "invoice_item_quantity": "8,00",
+                        "invoice_item_total_amount": "28,08EUR",
+                        "invoice_item_unit_price": "14,04EUR",
+                        "invoice_item_unit_type": "Adet"
+                    },
+                    {
+                        "invoice_item_commodity_code": "611241900000",
+                        "invoice_item_country_of_origin": "Turkey",
+                        "invoice_item_description": "G. Zigzag Bandeau Set",
+                        "invoice_item_no": "19",
+                        "invoice_item_package_quantity": "12,00",
+                        "invoice_item_product_id": "PLHEZ0CU25IY",
+                        "invoice_item_quantity": "12,00",
+                        "invoice_item_total_amount": "37,92EUR",
+                        "invoice_item_unit_price": "12,63EUR",
+                        "invoice_item_unit_type": "Adet"
+                    },
+                    {
+                        "invoice_item_commodity_code": "611241900000",
+                        "invoice_item_country_of_origin": "Turkey",
+                        "invoice_item_description": "Bubble Suit",
+                        "invoice_item_no": "20",
+                        "invoice_item_package_quantity": "24,00",
+                        "invoice_item_product_id": "PLIMS2Q125IY",
+                        "invoice_item_quantity": "24,00",
+                        "invoice_item_total_amount": "131,49EUR",
+                        "invoice_item_unit_price": "18,25EUR",
+                        "invoice_item_unit_type": "Adet"
+                    },
+                    {
+                        "invoice_item_commodity_code": "611241900000",
+                        "invoice_item_country_of_origin": "Turkey",
+                        "invoice_item_description": "Nora Hipster Bottom",
+                        "invoice_item_no": "21",
+                        "invoice_item_package_quantity": "6,00",
+                        "invoice_item_product_id": "PLJDV60925IY",
+                        "invoice_item_quantity": "6,00",
+                        "invoice_item_total_amount": "12,66EUR",
+                        "invoice_item_unit_price": "8,42EUR",
+                        "invoice_item_unit_type": "Adet"
+                    },
+                    {
+                        "invoice_item_commodity_code": "611241900000",
+                        "invoice_item_country_of_origin": "Turkey",
+                        "invoice_item_description": "Zigzag Triangle Fit Top",
+                        "invoice_item_no": "22",
+                        "invoice_item_package_quantity": "16,00",
+                        "invoice_item_product_id": "PLJT0Y0625IY",
+                        "invoice_item_quantity": "16,00",
+                        "invoice_item_total_amount": "50,56EUR",
+                        "invoice_item_unit_price": "12,63EUR",
+                        "invoice_item_unit_type": "Adet"
+                    },
+                    {
+                        "invoice_item_commodity_code": "611241900000",
+                        "invoice_item_country_of_origin": "Turkey",
+                        "invoice_item_description": "Bra Top",
+                        "invoice_item_no": "23",
+                        "invoice_item_package_quantity": "28,00",
+                        "invoice_item_product_id": "PLK5COBM25IY",
+                        "invoice_item_quantity": "28,00",
+                        "invoice_item_total_amount": "78,68EUR",
+                        "invoice_item_unit_price": "11,23EUR",
+                        "invoice_item_unit_type": "Adet"
+                    },
+                    {
+                        "invoice_item_commodity_code": "611241900000",
+                        "invoice_item_country_of_origin": "Turkey",
+                        "invoice_item_description": "Sona Sport Suit",
+                        "invoice_item_no": "24",
+                        "invoice_item_package_quantity": "30,00",
+                        "invoice_item_product_id": "PLKY936925IY",
+                        "invoice_item_quantity": "30,00",
+                        "invoice_item_total_amount": "164,04EUR",
+                        "invoice_item_unit_price": "18,25EUR",
+                        "invoice_item_unit_type": "Adet"
+                    },
+                    {
+                        "invoice_item_commodity_code": "611241900000",
+                        "invoice_item_country_of_origin": "Turkey",
+                        "invoice_item_description": "Bubble Hipster Bottom",
+                        "invoice_item_no": "25",
+                        "invoice_item_package_quantity": "28,00",
+                        "invoice_item_product_id": "PLM69GR825IY",
+                        "invoice_item_quantity": "28,00",
+                        "invoice_item_total_amount": "59,04EUR",
+                        "invoice_item_unit_price": "8,42EUR",
+                        "invoice_item_unit_type": "Adet"
+                    },
+                    {
+                        "invoice_item_commodity_code": "611241900000",
+                        "invoice_item_country_of_origin": "Turkey",
+                        "invoice_item_description": "Jessi Bra Top",
+                        "invoice_item_no": "26",
+                        "invoice_item_package_quantity": "20,00",
+                        "invoice_item_product_id": "PLNSWOPP25IY",
+                        "invoice_item_quantity": "20,00",
+                        "invoice_item_total_amount": "83,99EUR",
+                        "invoice_item_unit_price": "16,84EUR",
+                        "invoice_item_unit_type": "Adet"
+                    },
+                    {
+                        "invoice_item_commodity_code": "611241900000",
+                        "invoice_item_country_of_origin": "Turkey",
+                        "invoice_item_description": "Short Skirt",
+                        "invoice_item_no": "27",
+                        "invoice_item_package_quantity": "24,00",
+                        "invoice_item_product_id": "PLPE25CE25IY",
+                        "invoice_item_quantity": "24,00",
+                        "invoice_item_total_amount": "90,94EUR",
+                        "invoice_item_unit_price": "12,63EUR",
+                        "invoice_item_unit_type": "Adet"
+                    },
+                    {
+                        "invoice_item_commodity_code": "611241900000",
+                        "invoice_item_country_of_origin": "Turkey",
+                        "invoice_item_description": "Nora Strapless Top",
+                        "invoice_item_no": "28",
+                        "invoice_item_package_quantity": "6,00",
+                        "invoice_item_product_id": "PLT1272O25IY",
+                        "invoice_item_quantity": "6,00",
+                        "invoice_item_total_amount": "14,76EUR",
+                        "invoice_item_unit_price": "9,83EUR",
+                        "invoice_item_unit_type": "Adet"
+                    },
+                    {
+                        "invoice_item_commodity_code": "611241900000",
+                        "invoice_item_country_of_origin": "Bulgaria",
+                        "invoice_item_description": "Super Brazilian Bottom",
+                        "invoice_item_no": "29",
+                        "invoice_item_package_quantity": "20,00",
+                        "invoice_item_product_id": "PLVB2HQ325IY",
+                        "invoice_item_quantity": "20,00",
+                        "invoice_item_total_amount": "33,72EUR",
+                        "invoice_item_unit_price": "5,62EUR",
+                        "invoice_item_unit_type": "Adet"
+                    },
+                    {
+                        "invoice_item_commodity_code": "611241900000",
+                        "invoice_item_country_of_origin": "Turkey",
+                        "invoice_item_description": "Bubble Bralette Top",
+                        "invoice_item_no": "30",
+                        "invoice_item_package_quantity": "24,00",
+                        "invoice_item_product_id": "PLXC7WZA25IY",
+                        "invoice_item_quantity": "24,00",
+                        "invoice_item_total_amount": "59,04EUR",
+                        "invoice_item_unit_price": "9,83EUR",
+                        "invoice_item_unit_type": "Adet"
+                    }
+                ]
+            }
+        ],
+        "valid": "true",
+        "page": 2
+    },
+    {
+        "data": [
+            {
+                "invoice_currency": "EUR",
+                "invoice_customer_address": "Üniversiteler Mahallesi Dum lupınar
+Bulvari No:51 Çankaya/Ankara",
+                "invoice_customer_country": "Türkiye",
+                "invoice_customer_name": "GÜMRÜK VE TİCARET BAKANLIĞI",
+                "invoice_date": "2025-04-03",
+                "invoice_delivery_term": "ADET",
+                "invoice_id": "EXP2025000000363",
+                "invoice_payment_term": "ADET",
+                "invoice_po_number": "TR1.2",
+                "invoice_shipment_country_of_origin": "Türkiye",
+                "invoice_supplier_address": "488 No:12 34387 Şişli/İstanbul",
+                "invoice_supplier_country": "Türkiye",
+                "invoice_supplier_name": "Penti",
+                "invoice_supplier_vkn": "7280059048",
+                "invoice_total_amount": "151,61EUR",
+                "invoice_total_package_quantity": "24,00",
+                "invoice_total_quantity": "24,00",
+                "invoice_total_gross_weight": "24,00",
+                "invoice_total_net_weight": "24,00",
+                "items": [
+                    {
+                        "invoice_item_commodity_code": "611241900000",
+                        "invoice_item_country_of_origin": "Türkiye",
+                        "invoice_item_description": "DELLA SUIT",
+                        "invoice_item_no": "31",
+                        "invoice_item_package_quantity": "24,00",
+                        "invoice_item_product_id": "PLXOCF7L25IY",
+                        "invoice_item_quantity": "24,00",
+                        "invoice_item_total_amount": "21,05EUR",
+                        "invoice_item_unit_price": "21,05EUR",
+                        "invoice_item_unit_type": "ADET"
+                    },
+                    {
+                        "invoice_item_commodity_code": "620442000018",
+                        "invoice_item_country_of_origin": "Hindistan",
+                        "invoice_item_description": "RUDY ELBİSE",
+                        "invoice_item_no": "32",
+                        "invoice_item_package_quantity": "14,00",
+                        "invoice_item_product_id": "PLORQYRQ25IY",
+                        "invoice_item_quantity": "14,00",
+                        "invoice_item_total_amount": "23,86EUR",
+                        "invoice_item_unit_price": "23,86EUR",
+                        "invoice_item_unit_type": "ADET"
+                    },
+                    {
+                        "invoice_item_commodity_code": "620442000018",
+                        "invoice_item_country_of_origin": "Hindistan",
+                        "invoice_item_description": "RIO ELBİSE",
+                        "invoice_item_no": "33",
+                        "invoice_item_package_quantity": "30,00",
+                        "invoice_item_product_id": "PLQK00NQ25IY",
+                        "invoice_item_quantity": "30,00",
+                        "invoice_item_total_amount": "18,25EUR",
+                        "invoice_item_unit_price": "18,25EUR",
+                        "invoice_item_unit_type": "ADET"
+                    },
+                    {
+                        "invoice_item_commodity_code": "620462390000",
+                        "invoice_item_country_of_origin": "Hindistan",
+                        "invoice_item_description": "KIO PANTOLON",
+                        "invoice_item_no": "34",
+                        "invoice_item_package_quantity": "18,00",
+                        "invoice_item_product_id": "PLAIXSC225IY",
+                        "invoice_item_quantity": "18,00",
+                        "invoice_item_total_amount": "21,05EUR",
+                        "invoice_item_unit_price": "21,05EUR",
+                        "invoice_item_unit_type": "ADET"
+                    },
+                    {
+                        "invoice_item_commodity_code": "620462390000",
+                        "invoice_item_country_of_origin": "Hindistan",
+                        "invoice_item_description": "BOHO PANTOLON",
+                        "invoice_item_no": "35",
+                        "invoice_item_package_quantity": "22,00",
+                        "invoice_item_product_id": "PLG3GORI25IY",
+                        "invoice_item_quantity": "22,00",
+                        "invoice_item_total_amount": "22,46EUR",
+                        "invoice_item_unit_price": "22,46EUR",
+                        "invoice_item_unit_type": "ADET"
+                    },
+                    {
+                        "invoice_item_commodity_code": "620462390000",
+                        "invoice_item_country_of_origin": "Hindistan",
+                        "invoice_item_description": "KIO PANTOLON",
+                        "invoice_item_no": "36",
+                        "invoice_item_package_quantity": "18,00",
+                        "invoice_item_product_id": "PLXCR0DT25IY",
+                        "invoice_item_quantity": "18,00",
+                        "invoice_item_total_amount": "21,05EUR",
+                        "invoice_item_unit_price": "21,05EUR",
+                        "invoice_item_unit_type": "ADET"
+                    },
+                    {
+                        "invoice_item_commodity_code": "620462900000",
+                        "invoice_item_country_of_origin": "Türkiye",
+                        "invoice_item_description": "SHAY STRIPED SORT",
+                        "invoice_item_no": "37",
+                        "invoice_item_package_quantity": "22,00",
+                        "invoice_item_product_id": "PL4QRCN225IY",
+                        "invoice_item_quantity": "22,00",
+                        "invoice_item_total_amount": "14,04EUR",
+                        "invoice_item_unit_price": "14,04EUR",
+                        "invoice_item_unit_type": "ADET"
+                    },
+                    {
+                        "invoice_item_commodity_code": "620462900000",
+                        "invoice_item_country_of_origin": "Hindistan",
+                        "invoice_item_description": "WEST SORT",
+                        "invoice_item_no": "38",
+                        "invoice_item_package_quantity": "4,00",
+                        "invoice_item_product_id": "PLWAH4U425IY",
+                        "invoice_item_quantity": "4,00",
+                        "invoice_item_total_amount": "14,04EUR",
+                        "invoice_item_unit_price": "14,04EUR",
+                        "invoice_item_unit_type": "ADET"
+                    },
+                    {
+                        "invoice_item_commodity_code": "620469900000",
+                        "invoice_item_country_of_origin": "Misir",
+                        "invoice_item_description": "LUNA PANTOLON",
+                        "invoice_item_no": "39",
+                        "invoice_item_package_quantity": "24,00",
+                        "invoice_item_product_id": "PL26A2GG25IY",
+                        "invoice_item_quantity": "24,00",
+                        "invoice_item_total_amount": "15,44EUR",
+                        "invoice_item_unit_price": "15,44EUR",
+                        "invoice_item_unit_type": "ADET"
+                    },
+                    {
+                        "invoice_item_commodity_code": "602630000028",
+                        "invoice_item_country_of_origin": "Türkiye",
+                        "invoice_item_description": "BERRY GOMLEK",
+                        "invoice_item_no": "40",
+                        "invoice_item_package_quantity": "22,00",
+                        "invoice_item_product_id": "PLMBURH825IY",
+                        "invoice_item_quantity": "22,00",
+                        "invoice_item_total_amount": "14,04EUR",
+                        "invoice_item_unit_price": "14,04EUR",
+                        "invoice_item_unit_type": "ADET"
+                    },
+                    {
+                        "invoice_item_commodity_code": "620822000012",
+                        "invoice_item_country_of_origin": "Misir",
+                        "invoice_item_description": "STRAWBERRIES SS GÖMLEK SORT
+SET",
+                        "invoice_item_no": "41",
+                        "invoice_item_package_quantity": "33,00",
+                        "invoice_item_product_id": "PN24W83A25IY",
+                        "invoice_item_quantity": "33,00",
+                        "invoice_item_total_amount": "11,58EUR",
+                        "invoice_item_unit_price": "11,58EUR",
+                        "invoice_item_unit_type": "ADET"
+                    },
+                    {
+                        "invoice_item_commodity_code": "620822000012",
+                        "invoice_item_country_of_origin": "Misir",
+                        "invoice_item_description": "ENT CUTE STRIPES NS SORT 
+SET",
+                        "invoice_item_no": "42",
+                        "invoice_item_package_quantity": "12,00",
+                        "invoice_item_product_id": "PNSFQ3FZ25IY",
+                        "invoice_item_quantity": "12,00",
+                        "invoice_item_total_amount": "10,53EUR",
+                        "invoice_item_unit_price": "10,53EUR",
+                        "invoice_item_unit_type": "ADET"
+                    },
+                    {
+                        "invoice_item_commodity_code": "621111000011",
+                        "invoice_item_country_of_origin": "Misir",
+                        "invoice_item_description": "B.MIAMI SHORT",
+                        "invoice_item_no": "43",
+                        "invoice_item_package_quantity": "35,00",
+                        "invoice_item_product_id": "PLG3518425IY",
+                        "invoice_item_quantity": "35,00",
+                        "invoice_item_total_amount": "7,02EUR",
+                        "invoice_item_unit_price": "7,02EUR",
+                        "invoice_item_unit_type": "ADET"
+                    },
+                    {
+                        "invoice_item_commodity_code": "621111000011",
+                        "invoice_item_country_of_origin": "Misir",
+                        "invoice_item_description": "B.VOYAGE SHORT",
+                        "invoice_item_no": "44",
+                        "invoice_item_package_quantity": "45,00",
+                        "invoice_item_product_id": "PLK9E57125IY",
+                        "invoice_item_quantity": "45,00",
+                        "invoice_item_total_amount": "7,02EUR",
+                        "invoice_item_unit_price": "7,02EUR",
+                        "invoice_item_unit_type": "ADET"
+                    },
+                    {
+                        "invoice_item_commodity_code": "621111000011",
+                        "invoice_item_country_of_origin": "Misir",
+                        "invoice_item_description": "B.MIRO NAVY SHORT",
+                        "invoice_item_no": "45",
+                        "invoice_item_package_quantity": "45,00",
+                        "invoice_item_product_id": "PLMMO9VU25IY",
+                        "invoice_item_quantity": "45,00",
+                        "invoice_item_total_amount": "7,02EUR",
+                        "invoice_item_unit_price": "7,02EUR",
+                        "invoice_item_unit_type": "ADET"
+                    }
+                ]
+            }
+        ],
+        "valid": "true",
+        "page": 3
+    },
+    {
+        "data": [
+            {
+                "invoice_currency": "EUR",
+                "invoice_customer_address": "Üniversiteler Mahallesi Dumlupınar 
+Bulvarı No:51 Çankaya/Ankara",
+                "invoice_customer_country": "TR",
+                "invoice_customer_name": "GÜMRÜK VE TİCARET BAKANLIĞI",
+                "invoice_date": "2023-01-24",
+                "invoice_delivery_term": "TR.1.2",
+                "invoice_id": "EXP2025000000363",
+                "invoice_payment_term": "iHRACAT",
+                "invoice_po_number": "9119878108",
+                "invoice_shipment_country_of_origin": "TR",
+                "invoice_supplier_address": "488 No:12 34387 Şişli/İstanbul",
+                "invoice_supplier_country": "TR",
+                "invoice_supplier_name": "Penti",
+                "invoice_supplier_vkn": "7280059048",
+                "invoice_total_amount": "11967,36EUR",
+                "invoice_total_package_quantity": "60",
+                "invoice_total_quantity": "101,00",
+                "invoice_total_gross_weight": "200,08",
+                "invoice_total_net_weight": "155,08",
+                "items": [
+                    {
+                        "invoice_item_commodity_code": "621111000011",
+                        "invoice_item_country_of_origin": "TR",
+                        "invoice_item_description": "B.ANGRY SHARK SHORT",
+                        "invoice_item_no": "46",
+                        "invoice_item_package_quantity": "35,00",
+                        "invoice_item_product_id": "PLT1T92N25IY",
+                        "invoice_item_quantity": "35,00",
+                        "invoice_item_total_amount": "60,94EUR",
+                        "invoice_item_unit_price": "7,02EUR",
+                        "invoice_item_unit_type": "Adet"
+                    },
+                    {
+                        "invoice_item_commodity_code": "621142900000",
+                        "invoice_item_country_of_origin": "TR",
+                        "invoice_item_description": "WEST TOP",
+                        "invoice_item_no": "47",
+                        "invoice_item_package_quantity": "4,00",
+                        "invoice_item_product_id": "PL4H657425IY",
+                        "invoice_item_quantity": "4,00",
+                        "invoice_item_total_amount": "23,86EUR",
+                        "invoice_item_unit_price": "23,86EUR",
+                        "invoice_item_unit_type": "Adet"
+                    },
+                    {
+                        "invoice_item_commodity_code": "621142900000",
+                        "invoice_item_country_of_origin": "TR",
+                        "invoice_item_description": "LUNA TOP",
+                        "invoice_item_no": "48",
+                        "invoice_item_package_quantity": "8,00",
+                        "invoice_item_product_id": "PL4Y7ZUA25IY",
+                        "invoice_item_quantity": "8,00",
+                        "invoice_item_total_amount": "22,48EUR",
+                        "invoice_item_unit_price": "11,23EUR",
+                        "invoice_item_unit_type": "Adet"
+                    },
+                    {
+                        "invoice_item_commodity_code": "621142900000",
+                        "invoice_item_country_of_origin": "TR",
+                        "invoice_item_description": "BOHO TOP",
+                        "invoice_item_no": "49",
+                        "invoice_item_package_quantity": "22,00",
+                        "invoice_item_product_id": "PLH5V13725IY",
+                        "invoice_item_quantity": "22,00",
+                        "invoice_item_total_amount": "92,62EUR",
+                        "invoice_item_unit_price": "16,84EUR",
+                        "invoice_item_unit_type": "Adet"
+                    },
+                    {
+                        "invoice_item_commodity_code": "621142900000",
+                        "invoice_item_country_of_origin": "TR",
+                        "invoice_item_description": "KIO TOP",
+                        "invoice_item_no": "50",
+                        "invoice_item_package_quantity": "18,00",
+                        "invoice_item_product_id": "PLNYE6T025IY",
+                        "invoice_item_quantity": "18,00",
+                        "invoice_item_total_amount": "50,58EUR",
+                        "invoice_item_unit_price": "11,23EUR",
+                        "invoice_item_unit_type": "Adet"
+                    },
+                    {
+                        "invoice_item_commodity_code": "621142900000",
+                        "invoice_item_country_of_origin": "TR",
+                        "invoice_item_description": "KIO TOP",
+                        "invoice_item_no": "51",
+                        "invoice_item_package_quantity": "27,00",
+                        "invoice_item_product_id": "PLV7163025IY",
+                        "invoice_item_quantity": "27,00",
+                        "invoice_item_total_amount": "75,87EUR",
+                        "invoice_item_unit_price": "11,23EUR",
+                        "invoice_item_unit_type": "Adet"
+                    },
+                    {
+                        "invoice_item_commodity_code": "621142900000",
+                        "invoice_item_country_of_origin": "TR",
+                        "invoice_item_description": "NATURAL ELBİSE",
+                        "invoice_item_no": "52",
+                        "invoice_item_package_quantity": "5,00",
+                        "invoice_item_product_id": "PLXQGTGX25IY",
+                        "invoice_item_quantity": "5,00",
+                        "invoice_item_total_amount": "19,30EUR",
+                        "invoice_item_unit_price": "15,44EUR",
+                        "invoice_item_unit_type": "Adet"
+                    },
+                    {
+                        "invoice_item_commodity_code": "621143900000",
+                        "invoice_item_country_of_origin": "TR",
+                        "invoice_item_description": "GRACE ELBİSE",
+                        "invoice_item_no": "53",
+                        "invoice_item_package_quantity": "18,00",
+                        "invoice_item_product_id": "PL5Z43YD25IY",
+                        "invoice_item_quantity": "18,00",
+                        "invoice_item_total_amount": "138,96EUR",
+                        "invoice_item_unit_price": "30,88EUR",
+                        "invoice_item_unit_type": "Adet"
+                    },
+                    {
+                        "invoice_item_commodity_code": "621143900000",
+                        "invoice_item_country_of_origin": "TR",
+                        "invoice_item_description": "FREYA KIMONO",
+                        "invoice_item_no": "54",
+                        "invoice_item_package_quantity": "24,00",
+                        "invoice_item_product_id": "PL8O25WJ25IY",
+                        "invoice_item_quantity": "24,00",
+                        "invoice_item_total_amount": "87,60EUR",
+                        "invoice_item_unit_price": "18,25EUR",
+                        "invoice_item_unit_type": "Adet"
+                    },
+                    {
+                        "invoice_item_commodity_code": "621143900000",
+                        "invoice_item_country_of_origin": "TR",
+                        "invoice_item_description": "ANİKA ELBİSE",
+                        "invoice_item_no": "55",
+                        "invoice_item_package_quantity": "27,00",
+                        "invoice_item_product_id": "PLAVHCor25IY",
+                        "invoice_item_quantity": "27,00",
+                        "invoice_item_total_amount": "189,53EUR",
+                        "invoice_item_unit_price": "28,07EUR",
+                        "invoice_item_unit_type": "Adet"
+                    },
+                    {
+                        "invoice_item_commodity_code": "621143900000",
+                        "invoice_item_country_of_origin": "TR",
+                        "invoice_item_description": "DELLA PANTOLON",
+                        "invoice_item_no": "56",
+                        "invoice_item_package_quantity": "30,00",
+                        "invoice_item_product_id": "PLGGQG8925IY",
+                        "invoice_item_quantity": "30,00",
+                        "invoice_item_total_amount": "105,30EUR",
+                        "invoice_item_unit_price": "14,04EUR",
+                        "invoice_item_unit_type": "Adet"
+                    },
+                    {
+                        "invoice_item_commodity_code": "621143900000",
+                        "invoice_item_country_of_origin": "TR",
+                        "invoice_item_description": "CLOVE ELBİSE",
+                        "invoice_item_no": "57",
+                        "invoice_item_package_quantity": "28,00",
+                        "invoice_item_product_id": "PLJ9PDPW25IY",
+                        "invoice_item_quantity": "28,00",
+                        "invoice_item_total_amount": "108,08EUR",
+                        "invoice_item_unit_price": "15,44EUR",
+                        "invoice_item_unit_type": "Adet"
+                    },
+                    {
+                        "invoice_item_commodity_code": "621143900000",
+                        "invoice_item_country_of_origin": "TR",
+                        "invoice_item_description": "G.BASIC CAFTAN",
+                        "invoice_item_no": "58",
+                        "invoice_item_package_quantity": "8,00",
+                        "invoice_item_product_id": "PLJH046125IY",
+                        "invoice_item_quantity": "8,00",
+                        "invoice_item_total_amount": "16,84EUR",
+                        "invoice_item_unit_price": "8,42EUR",
+                        "invoice_item_unit_type": "Adet"
+                    },
+                    {
+                        "invoice_item_commodity_code": "621143900000",
+                        "invoice_item_country_of_origin": "TR",
+                        "invoice_item_description": "BASIC KAFTAN",
+                        "invoice_item_no": "59",
+                        "invoice_item_package_quantity": "20,00",
+                        "invoice_item_product_id": "PLKX4VfU25IY",
+                        "invoice_item_quantity": "20,00",
+                        "invoice_item_total_amount": "42,19EUR",
+                        "invoice_item_unit_price": "10,53EUR",
+                        "invoice_item_unit_type": "Adet"
+                    },
+                    {
+                        "invoice_item_commodity_code": "621143900000",
+                        "invoice_item_country_of_origin": "TR",
+                        "invoice_item_description": "FREYA SORT",
+                        "invoice_item_no": "60",
+                        "invoice_item_package_quantity": "24,00",
+                        "invoice_item_product_id": "PLM7MX225IY",
+                        "invoice_item_quantity": "24,00",
+                        "invoice_item_total_amount": "67,44EUR",
+                        "invoice_item_unit_price": "11,23EUR",
+                        "invoice_item_unit_type": "Adet"
+                    }
+                ]
+            }
+        ],
+        "valid": "true",
+        "page": 4
+    },
+    {
+        "data": [
+            {
+                "invoice_currency": "EUR",
+                "invoice_customer_address": "Abkhazia/Georgia, Sukhum, 57 
+Kogoniya St GURCISTAN Sohum 34000 Gürcistan",
+                "invoice_customer_country": "Georgia",
+                "invoice_customer_name": "INDIVIDUAL ENTEREPRENEUR (IE) DZHOPUA 
+R.A",
+                "invoice_date": "2020-01-02",
+                "invoice_delivery_term": "TR1.2",
+                "invoice_id": "EXP2025000000363",
+                "invoice_payment_term": "IHRACAT",
+                "invoice_po_number": "PYJ441KT25IY",
+                "invoice_shipment_country_of_origin": "Türkiye",
+                "invoice_supplier_address": "Üniversiteler Mahallesi Dumlupınar 
+Bulvarı No:51 Çankaya/Ankara",
+                "invoice_supplier_country": "Turkey",
+                "invoice_supplier_name": "Penti",
+                "invoice_supplier_vkn": "1460415308",
+                "invoice_total_amount": "11731.86",
+                "invoice_total_package_quantity": "75",
+                "invoice_total_quantity": "661.66",
+                "invoice_total_gross_weight": "42.53",
+                "invoice_total_net_weight": "38.37",
+                "items": [
+                    {
+                        "invoice_item_commodity_code": "6114390000",
+                        "invoice_item_country_of_origin": "Türkiye",
+                        "invoice_item_description": "MINDY KIMONO",
+                        "invoice_item_no": "61",
+                        "invoice_item_package_quantity": "28.00",
+                        "invoice_item_product_id": "PLMPN MZM25IY",
+                        "invoice_item_quantity": "14.04",
+                        "invoice_item_total_amount": "78.58",
+                        "invoice_item_unit_price": "5.60",
+                        "invoice_item_unit_type": "Adet"
+                    },
+                    {
+                        "invoice_item_commodity_code": "6114390000",
+                        "invoice_item_country_of_origin": "Türkiye",
+                        "invoice_item_description": "ANIK ELBİSE",
+                        "invoice_item_no": "62",
+                        "invoice_item_package_quantity": "27.00",
+                        "invoice_item_product_id": "PL0DUW1125IY",
+                        "invoice_item_quantity": "28.07",
+                        "invoice_item_total_amount": "189.54",
+                        "invoice_item_unit_price": "6.75",
+                        "invoice_item_unit_type": "Adet"
+                    },
+                    {
+                        "invoice_item_commodity_code": "6114390000",
+                        "invoice_item_country_of_origin": "Türkiye",
+                        "invoice_item_description": "BASIC KAFTAN",
+                        "invoice_item_no": "63",
+                        "invoice_item_package_quantity": "32.00",
+                        "invoice_item_product_id": "PLQG90XC25IY",
+                        "invoice_item_quantity": "10.53",
+                        "invoice_item_total_amount": "67.38",
+                        "invoice_item_unit_price": "6.40",
+                        "invoice_item_unit_type": "Adet"
+                    },
+                    {
+                        "invoice_item_commodity_code": "6114390000",
+                        "invoice_item_country_of_origin": "Türkiye",
+                        "invoice_item_description": "LINA PANTOLON",
+                        "invoice_item_no": "64",
+                        "invoice_item_package_quantity": "30.00",
+                        "invoice_item_product_id": "PLT9HN8G25IY",
+                        "invoice_item_quantity": "15.44",
+                        "invoice_item_total_amount": "115.80",
+                        "invoice_item_unit_price": "7.50",
+                        "invoice_item_unit_type": "Adet"
+                    },
+                    {
+                        "invoice_item_commodity_code": "6114390000",
+                        "invoice_item_country_of_origin": "Türkiye",
+                        "invoice_item_description": "BASIC KAFTAN",
+                        "invoice_item_no": "65",
+                        "invoice_item_package_quantity": "32.00",
+                        "invoice_item_product_id": "PLVIU3T825IY",
+                        "invoice_item_quantity": "10.53",
+                        "invoice_item_total_amount": "67.38",
+                        "invoice_item_unit_price": "6.40",
+                        "invoice_item_unit_type": "Adet"
+                    },
+                    {
+                        "invoice_item_commodity_code": "6114390000",
+                        "invoice_item_country_of_origin": "Türkiye",
+                        "invoice_item_description": "MINDY PANTOLON",
+                        "invoice_item_no": "66",
+                        "invoice_item_package_quantity": "30.00",
+                        "invoice_item_product_id": "PLXYD33X25IY",
+                        "invoice_item_quantity": "15.44",
+                        "invoice_item_total_amount": "115.80",
+                        "invoice_item_unit_price": "7.50",
+                        "invoice_item_unit_type": "Adet"
+                    },
+                    {
+                        "invoice_item_commodity_code": "6117000000",
+                        "invoice_item_country_of_origin": "Türkiye",
+                        "invoice_item_description": "GIRLS PAYETTE TOKA SET",
+                        "invoice_item_no": "67",
+                        "invoice_item_package_quantity": "25.00",
+                        "invoice_item_product_id": "PYJ441KT25IY",
+                        "invoice_item_quantity": "4.21",
+                        "invoice_item_total_amount": "105.25",
+                        "invoice_item_unit_price": "25.00",
+                        "invoice_item_unit_type": "Adet"
+                    },
+                    {
+                        "invoice_item_commodity_code": "6302600000",
+                        "invoice_item_country_of_origin": "Türkiye",
+                        "invoice_item_description": "SHELL HAVLU",
+                        "invoice_item_no": "68",
+                        "invoice_item_package_quantity": "30.00",
+                        "invoice_item_product_id": "PYCSHG3H25IY",
+                        "invoice_item_quantity": "9.47",
+                        "invoice_item_total_amount": "28.42",
+                        "invoice_item_unit_price": "0.30",
+                        "invoice_item_unit_type": "Adet"
+                    },
+                    {
+                        "invoice_item_commodity_code": "6302600000",
+                        "invoice_item_country_of_origin": "Türkiye",
+                        "invoice_item_description": "WILMA HAVLU",
+                        "invoice_item_no": "69",
+                        "invoice_item_package_quantity": "30.00",
+                        "invoice_item_product_id": "PYDDRP5L25IY",
+                        "invoice_item_quantity": "9.47",
+                        "invoice_item_total_amount": "28.42",
+                        "invoice_item_unit_price": "0.30",
+                        "invoice_item_unit_type": "Adet"
+                    },
+                    {
+                        "invoice_item_commodity_code": "6302600000",
+                        "invoice_item_country_of_origin": "Türkiye",
+                        "invoice_item_description": "PALM HAVLU",
+                        "invoice_item_no": "70",
+                        "invoice_item_package_quantity": "30.00",
+                        "invoice_item_product_id": "PYHCLI2Q25IY",
+                        "invoice_item_quantity": "9.47",
+                        "invoice_item_total_amount": "28.42",
+                        "invoice_item_unit_price": "0.30",
+                        "invoice_item_unit_type": "Adet"
+                    },
+                    {
+                        "invoice_item_commodity_code": "6302600000",
+                        "invoice_item_country_of_origin": "Türkiye",
+                        "invoice_item_description": "GIRLS DAISY HAVLU",
+                        "invoice_item_no": "71",
+                        "invoice_item_package_quantity": "25.00",
+                        "invoice_item_product_id": "PYLFRP6325IY",
+                        "invoice_item_quantity": "9.47",
+                        "invoice_item_total_amount": "23.68",
+                        "invoice_item_unit_price": "0.30",
+                        "invoice_item_unit_type": "Adet"
+                    },
+                    {
+                        "invoice_item_commodity_code": "6302600000",
+                        "invoice_item_country_of_origin": "Türkiye",
+                        "invoice_item_description": "LEAF HAVLU",
+                        "invoice_item_no": "72",
+                        "invoice_item_package_quantity": "30.00",
+                        "invoice_item_product_id": "PYOP5V2W25IY",
+                        "invoice_item_quantity": "9.47",
+                        "invoice_item_total_amount": "28.42",
+                        "invoice_item_unit_price": "0.30",
+                        "invoice_item_unit_type": "Adet"
+                    },
+                    {
+                        "invoice_item_commodity_code": "6302600000",
+                        "invoice_item_country_of_origin": "Türkiye",
+                        "invoice_item_description": "ROB HAVLU",
+                        "invoice_item_no": "73",
+                        "invoice_item_package_quantity": "30.00",
+                        "invoice_item_product_id": "PYRQ6RBJ25IY",
+                        "invoice_item_quantity": "9.47",
+                        "invoice_item_total_amount": "28.42",
+                        "invoice_item_unit_price": "0.30",
+                        "invoice_item_unit_type": "Adet"
+                    },
+                    {
+                        "invoice_item_commodity_code": "6302600000",
+                        "invoice_item_country_of_origin": "Türkiye",
+                        "invoice_item_description": "TRIO HAVLU",
+                        "invoice_item_no": "74",
+                        "invoice_item_package_quantity": "30.00",
+                        "invoice_item_product_id": "PYYJ7WXZ25IY",
+                        "invoice_item_quantity": "9.47",
+                        "invoice_item_total_amount": "28.42",
+                        "invoice_item_unit_price": "0.30",
+                        "invoice_item_unit_type": "Adet"
+                    },
+                    {
+                        "invoice_item_commodity_code": "6307909800",
+                        "invoice_item_country_of_origin": "Türkiye",
+                        "invoice_item_description": "SUZANE YELPAZE",
+                        "invoice_item_no": "75",
+                        "invoice_item_package_quantity": "60.00",
+                        "invoice_item_product_id": "PYGBZIXS25IY",
+                        "invoice_item_quantity": "2.63",
+                        "invoice_item_total_amount": "15.78",
+                        "invoice_item_unit_price": "6.00",
+                        "invoice_item_unit_type": "Adet"
+                    }
+                ]
+            }
+        ],
+        "valid": "true",
+        "page": 5
+    },
+    {
+        "data": [
+            {
+                "invoice_currency": "EUR",
+                "invoice_customer_address": "Üniversiteler Mahallesi Dumlupınar 
+Bulvarı No:51 Çankaya/Ankara",
+                "invoice_customer_country": "Ankara",
+                "invoice_customer_name": "GÜMRÜK VE TİCARET BAKANLIĞI",
+                "invoice_date": "2020-06-01",
+                "invoice_delivery_term": "Adet",
+                "invoice_id": "EXP2025000000363",
+                "invoice_payment_term": "Adet",
+                "invoice_po_number": "TR1.2",
+                "invoice_shipment_country_of_origin": "Ankara",
+                "invoice_supplier_address": "Abkhazia,Georgia, Sukhum, 57 
+Kogoniya St GURCISTAN Sohum 34000 Gürçistan",
+                "invoice_supplier_country": "Gürçistan",
+                "invoice_supplier_name": "INDIVIDUAL ENTREPRENEUR (IE) DZHOPUA 
+R.A",
+                "invoice_supplier_vkn": "1460415308",
+                "invoice_total_amount": "336,95EUR",
+                "invoice_total_package_quantity": "120,00",
+                "invoice_total_quantity": "748,00",
+                "invoice_total_gross_weight": "47,11",
+                "invoice_total_net_weight": "36,90",
+                "items": [
+                    {
+                        "invoice_item_commodity_code": "650500902000",
+                        "invoice_item_country_of_origin": "Türkiye",
+                        "invoice_item_description": "Çın Halk Cumhuriyeti",
+                        "invoice_item_no": "76",
+                        "invoice_item_package_quantity": "28,00",
+                        "invoice_item_product_id": "PY0U3U7M25IY",
+                        "invoice_item_quantity": "28,00",
+                        "invoice_item_total_amount": "79,64EUR",
+                        "invoice_item_unit_price": "3,16EUR",
+                        "invoice_item_unit_type": "Adet"
+                    },
+                    {
+                        "invoice_item_commodity_code": "711719009029",
+                        "invoice_item_country_of_origin": "Türkiye",
+                        "invoice_item_description": "Çın Halk Cumhuriyeti",
+                        "invoice_item_no": "77",
+                        "invoice_item_package_quantity": "28,00",
+                        "invoice_item_product_id": "PY09I2N25IY",
+                        "invoice_item_quantity": "28,00",
+                        "invoice_item_total_amount": "159,26EUR",
+                        "invoice_item_unit_price": "6,32EUR",
+                        "invoice_item_unit_type": "Adet"
+                    },
+                    {
+                        "invoice_item_commodity_code": "711719009029",
+                        "invoice_item_country_of_origin": "Türkiye",
+                        "invoice_item_description": "Çın Halk Cumhuriyeti",
+                        "invoice_item_no": "78",
+                        "invoice_item_package_quantity": "35,00",
+                        "invoice_item_product_id": "PY1NQ5ZR25IY",
+                        "invoice_item_quantity": "35,00",
+                        "invoice_item_total_amount": "132,61EUR",
+                        "invoice_item_unit_price": "4,21EUR",
+                        "invoice_item_unit_type": "Adet"
+                    },
+                    {
+                        "invoice_item_commodity_code": "711719009029",
+                        "invoice_item_country_of_origin": "Türkiye",
+                        "invoice_item_description": "Çın Halk Cumhuriyeti",
+                        "invoice_item_no": "79",
+                        "invoice_item_package_quantity": "28,00",
+                        "invoice_item_product_id": "PY213OWA25IY",
+                        "invoice_item_quantity": "28,00",
+                        "invoice_item_total_amount": "106,08EUR",
+                        "invoice_item_unit_price": "4,21EUR",
+                        "invoice_item_unit_type": "Adet"
+                    },
+                    {
+                        "invoice_item_commodity_code": "711719009029",
+                        "invoice_item_country_of_origin": "Türkiye",
+                        "invoice_item_description": "Çın Halk Cumhuriyeti",
+                        "invoice_item_no": "80",
+                        "invoice_item_package_quantity": "29,00",
+                        "invoice_item_product_id": "PY399U4025IY",
+                        "invoice_item_quantity": "29,00",
+                        "invoice_item_total_amount": "109,87EUR",
+                        "invoice_item_unit_price": "4,21EUR",
+                        "invoice_item_unit_type": "Adet"
+                    },
+                    {
+                        "invoice_item_commodity_code": "711719009029",
+                        "invoice_item_country_of_origin": "Türkiye",
+                        "invoice_item_description": "Çın Halk Cumhuriyeti",
+                        "invoice_item_no": "81",
+                        "invoice_item_package_quantity": "28,00",
+                        "invoice_item_product_id": "PY401K4V25IY",
+                        "invoice_item_quantity": "28,00",
+                        "invoice_item_total_amount": "132,54EUR",
+                        "invoice_item_unit_price": "5,26EUR",
+                        "invoice_item_unit_type": "Adet"
+                    },
+                    {
+                        "invoice_item_commodity_code": "711719009029",
+                        "invoice_item_country_of_origin": "Türkiye",
+                        "invoice_item_description": "Çın Halk Cumhuriyeti",
+                        "invoice_item_no": "82",
+                        "invoice_item_package_quantity": "50,00",
+                        "invoice_item_product_id": "PY4XI1V925IY",
+                        "invoice_item_quantity": "50,00",
+                        "invoice_item_total_amount": "263,00EUR",
+                        "invoice_item_unit_price": "5,26EUR",
+                        "invoice_item_unit_type": "Adet"
+                    },
+                    {
+                        "invoice_item_commodity_code": "711719009029",
+                        "invoice_item_country_of_origin": "Türkiye",
+                        "invoice_item_description": "Çın Halk Cumhuriyeti",
+                        "invoice_item_no": "83",
+                        "invoice_item_package_quantity": "14,00",
+                        "invoice_item_product_id": "PY6G62QK25IY",
+                        "invoice_item_quantity": "14,00",
+                        "invoice_item_total_amount": "66,28EUR",
+                        "invoice_item_unit_price": "5,26EUR",
+                        "invoice_item_unit_type": "Adet"
+                    },
+                    {
+                        "invoice_item_commodity_code": "711719009029",
+                        "invoice_item_country_of_origin": "Türkiye",
+                        "invoice_item_description": "Çın Halk Cumhuriyeti",
+                        "invoice_item_no": "84",
+                        "invoice_item_package_quantity": "14,00",
+                        "invoice_item_product_id": "PY8KU3HS25IY",
+                        "invoice_item_quantity": "14,00",
+                        "invoice_item_total_amount": "53,04EUR",
+                        "invoice_item_unit_price": "4,21EUR",
+                        "invoice_item_unit_type": "Adet"
+                    },
+                    {
+                        "invoice_item_commodity_code": "711719009029",
+                        "invoice_item_country_of_origin": "Türkiye",
+                        "invoice_item_description": "Çın Halk Cumhuriyeti",
+                        "invoice_item_no": "85",
+                        "invoice_item_package_quantity": "28,00",
+                        "invoice_item_product_id": "PY8ZB20M25IY",
+                        "invoice_item_quantity": "28,00",
+                        "invoice_item_total_amount": "132,54EUR",
+                        "invoice_item_unit_price": "5,26EUR",
+                        "invoice_item_unit_type": "Adet"
+                    },
+                    {
+                        "invoice_item_commodity_code": "711719009029",
+                        "invoice_item_country_of_origin": "Türkiye",
+                        "invoice_item_description": "Çın Halk Cumhuriyeti",
+                        "invoice_item_no": "86",
+                        "invoice_item_package_quantity": "28,00",
+                        "invoice_item_product_id": "PYA312UQ25IY",
+                        "invoice_item_quantity": "28,00",
+                        "invoice_item_total_amount": "159,27EUR",
+                        "invoice_item_unit_price": "6,32EUR",
+                        "invoice_item_unit_type": "Adet"
+                    },
+                    {
+                        "invoice_item_commodity_code": "711719009029",
+                        "invoice_item_country_of_origin": "Türkiye",
+                        "invoice_item_description": "Çın Halk Cumhuriyeti",
+                        "invoice_item_no": "87",
+                        "invoice_item_package_quantity": "3,00",
+                        "invoice_item_product_id": "PYDFD10K25IY",
+                        "invoice_item_quantity": "3,00",
+                        "invoice_item_total_amount": "17,06EUR",
+                        "invoice_item_unit_price": "6,32EUR",
+                        "invoice_item_unit_type": "Adet"
+                    },
+                    {
+                        "invoice_item_commodity_code": "711719009029",
+                        "invoice_item_country_of_origin": "Türkiye",
+                        "invoice_item_description": "Çın Halk Cumhuriyeti",
+                        "invoice_item_no": "88",
+                        "invoice_item_package_quantity": "30,00",
+                        "invoice_item_product_id": "PYDOUTQW25IY",
+                        "invoice_item_quantity": "30,00",
+                        "invoice_item_total_amount": "157,80EUR",
+                        "invoice_item_unit_price": "5,26EUR",
+                        "invoice_item_unit_type": "Adet"
+                    },
+                    {
+                        "invoice_item_commodity_code": "711719009029",
+                        "invoice_item_country_of_origin": "Türkiye",
+                        "invoice_item_description": "Türkiye",
+                        "invoice_item_no": "89",
+                        "invoice_item_package_quantity": "28,00",
+                        "invoice_item_product_id": "PYIYVZH125IY",
+                        "invoice_item_quantity": "28,00",
+                        "invoice_item_total_amount": "159,27EUR",
+                        "invoice_item_unit_price": "6,32EUR",
+                        "invoice_item_unit_type": "Adet"
+                    },
+                    {
+                        "invoice_item_commodity_code": "711719009029",
+                        "invoice_item_country_of_origin": "Türkiye",
+                        "invoice_item_description": "Çın Halk Cumhuriyeti",
+                        "invoice_item_no": "90",
+                        "invoice_item_package_quantity": "25,00",
+                        "invoice_item_product_id": "PYJ1Q2Y025IY",
+                        "invoice_item_quantity": "25,00",
+                        "invoice_item_total_amount": "131,50EUR",
+                        "invoice_item_unit_price": "5,26EUR",
+                        "invoice_item_unit_type": "Adet"
+                    }
+                ]
+            }
+        ],
+        "valid": "true",
+        "page": 6
+    },
+    {
+        "data": [
+            {
+                "invoice_currency": "EUR",
+                "invoice_customer_address": "Üniversiteler Mahallesi Dumluşpun 
+Bulvarı No:51 Çankaya/Ankara",
+                "invoice_customer_country": "Ulus",
+                "invoice_customer_name": "GÜMRÜK VE TİCARET BAKANLIĞI",
+                "invoice_date": "2023-03-03",
+                "invoice_delivery_term": "Adet",
+                "invoice_id": "EXP2025000000363",
+                "invoice_payment_term": "TR.1.2",
+                "invoice_po_number": "00505687-8172-1FE0-89BD-32C5A47A8111",
+                "invoice_shipment_country_of_origin": "Ulus",
+                "invoice_supplier_address": "Abkhazia/Georgia, Sukhum, 57 
+Kogoniya St GURCISTAN Sohum 34000 Gürcistan",
+                "invoice_supplier_country": "Georgia",
+                "invoice_supplier_name": "INDIVIDUAL ENTREPRENEUR (IE) DZHOPUA 
+R.A",
+                "invoice_supplier_vkn": "1460415308",
+                "invoice_total_amount": "2570,16 EUR",
+                "invoice_total_package_quantity": "104",
+                "invoice_total_quantity": "2570.16",
+                "invoice_total_gross_weight": null,
+                "invoice_total_net_weight": null,
+                "items": [
+                    {
+                        "invoice_item_commodity_code": "711719009029",
+                        "invoice_item_country_of_origin": "Turkey",
+                        "invoice_item_description": "PENELOPE BILEKLİK",
+                        "invoice_item_no": "91",
+                        "invoice_item_package_quantity": "29",
+                        "invoice_item_product_id": "PYNS25AL25IY",
+                        "invoice_item_quantity": "29",
+                        "invoice_item_total_amount": "109,87EUR",
+                        "invoice_item_unit_price": "4,21EUR",
+                        "invoice_item_unit_type": "Adet"
+                    },
+                    {
+                        "invoice_item_commodity_code": "711719009029",
+                        "invoice_item_country_of_origin": "Turkey",
+                        "invoice_item_description": "GISELE KUPE SET",
+                        "invoice_item_no": "92",
+                        "invoice_item_package_quantity": "28",
+                        "invoice_item_product_id": "PYQWDR8A25IY",
+                        "invoice_item_quantity": "28",
+                        "invoice_item_total_amount": "106,08EUR",
+                        "invoice_item_unit_price": "4,21EUR",
+                        "invoice_item_unit_type": "Adet"
+                    },
+                    {
+                        "invoice_item_commodity_code": "711719009029",
+                        "invoice_item_country_of_origin": "Turkey",
+                        "invoice_item_description": "NATURAL KUPE SET",
+                        "invoice_item_no": "93",
+                        "invoice_item_package_quantity": "28",
+                        "invoice_item_product_id": "PYTUXOLD25IY",
+                        "invoice_item_quantity": "28",
+                        "invoice_item_total_amount": "159,27EUR",
+                        "invoice_item_unit_price": "6,32EUR",
+                        "invoice_item_unit_type": "Adet"
+                    },
+                    {
+                        "invoice_item_commodity_code": "711719009029",
+                        "invoice_item_country_of_origin": "Turkey",
+                        "invoice_item_description": "ESTELA KOLYE",
+                        "invoice_item_no": "94",
+                        "invoice_item_package_quantity": "8",
+                        "invoice_item_product_id": "PYV9BN7025IY",
+                        "invoice_item_quantity": "8",
+                        "invoice_item_total_amount": "30,31EUR",
+                        "invoice_item_unit_price": "4,21EUR",
+                        "invoice_item_unit_type": "Adet"
+                    },
+                    {
+                        "invoice_item_commodity_code": "711719009029",
+                        "invoice_item_country_of_origin": "Turkey",
+                        "invoice_item_description": "MIX HEART KUPE SET",
+                        "invoice_item_no": "95",
+                        "invoice_item_package_quantity": "28",
+                        "invoice_item_product_id": "PYVD3L5525IY",
+                        "invoice_item_quantity": "28",
+                        "invoice_item_total_amount": "185,73EUR",
+                        "invoice_item_unit_price": "7,37EUR",
+                        "invoice_item_unit_type": "Adet"
+                    },
+                    {
+                        "invoice_item_commodity_code": "711719009029",
+                        "invoice_item_country_of_origin": "Turkey",
+                        "invoice_item_description": "OLA KUPE SET",
+                        "invoice_item_no": "96",
+                        "invoice_item_package_quantity": "14",
+                        "invoice_item_product_id": "PYVN3QUM25IY",
+                        "invoice_item_quantity": "14",
+                        "invoice_item_total_amount": "79,64EUR",
+                        "invoice_item_unit_price": "6,32EUR",
+                        "invoice_item_unit_type": "Adet"
+                    },
+                    {
+                        "invoice_item_commodity_code": "711719009029",
+                        "invoice_item_country_of_origin": "Turkey",
+                        "invoice_item_description": "MIX AQUA KUPE SET",
+                        "invoice_item_no": "97",
+                        "invoice_item_package_quantity": "33",
+                        "invoice_item_product_id": "PYW0UY5Q25IY",
+                        "invoice_item_quantity": "33",
+                        "invoice_item_total_amount": "218,97EUR",
+                        "invoice_item_unit_price": "7,37EUR",
+                        "invoice_item_unit_type": "Adet"
+                    },
+                    {
+                        "invoice_item_commodity_code": "711719009029",
+                        "invoice_item_country_of_origin": "Turkey",
+                        "invoice_item_description": "GIRLS SUMMER KUPE",
+                        "invoice_item_no": "98",
+                        "invoice_item_package_quantity": "50",
+                        "invoice_item_product_id": "PYX0D22C25IY",
+                        "invoice_item_quantity": "50",
+                        "invoice_item_total_amount": "263,00EUR",
+                        "invoice_item_unit_price": "5,26EUR",
+                        "invoice_item_unit_type": "Adet"
+                    },
+                    {
+                        "invoice_item_commodity_code": "711719009029",
+                        "invoice_item_country_of_origin": "Turkey",
+                        "invoice_item_description": "FLOWER KUPE SET",
+                        "invoice_item_no": "99",
+                        "invoice_item_package_quantity": "28",
+                        "invoice_item_product_id": "PYZ167D625IY",
+                        "invoice_item_quantity": "28",
+                        "invoice_item_total_amount": "132,54EUR",
+                        "invoice_item_unit_price": "5,26EUR",
+                        "invoice_item_unit_type": "Adet"
+                    },
+                    {
+                        "invoice_item_commodity_code": "711719009029",
+                        "invoice_item_country_of_origin": "Turkey",
+                        "invoice_item_description": "BERRY KOLYE SET",
+                        "invoice_item_no": "100",
+                        "invoice_item_package_quantity": "28",
+                        "invoice_item_product_id": "PYZSXX5T25IY",
+                        "invoice_item_quantity": "28",
+                        "invoice_item_total_amount": "132,54EUR",
+                        "invoice_item_unit_price": "5,26EUR",
+                        "invoice_item_unit_type": "Adet"
+                    },
+                    {
+                        "invoice_item_commodity_code": "961511000000",
+                        "invoice_item_country_of_origin": "Turkey",
+                        "invoice_item_description": "GIRLS BEADS TOKA",
+                        "invoice_item_no": "101",
+                        "invoice_item_package_quantity": "60",
+                        "invoice_item_product_id": "PY04MJ8X25IY",
+                        "invoice_item_quantity": "60",
+                        "invoice_item_total_amount": "252,60EUR",
+                        "invoice_item_unit_price": "4,21EUR",
+                        "invoice_item_unit_type": "Adet"
+                    },
+                    {
+                        "invoice_item_commodity_code": "961511000000",
+                        "invoice_item_country_of_origin": "Turkey",
+                        "invoice_item_description": "GIRLS ELENORA TOKA",
+                        "invoice_item_no": "102",
+                        "invoice_item_package_quantity": "50",
+                        "invoice_item_product_id": "PY25K74G25IY",
+                        "invoice_item_quantity": "50",
+                        "invoice_item_total_amount": "263,00EUR",
+                        "invoice_item_unit_price": "5,26EUR",
+                        "invoice_item_unit_type": "Adet"
+                    },
+                    {
+                        "invoice_item_commodity_code": "961511000000",
+                        "invoice_item_country_of_origin": "Turkey",
+                        "invoice_item_description": "SAMARA TOKA SET",
+                        "invoice_item_no": "103",
+                        "invoice_item_package_quantity": "24",
+                        "invoice_item_product_id": "PY65I3BL25IY",
+                        "invoice_item_quantity": "24",
+                        "invoice_item_total_amount": "101,04EUR",
+                        "invoice_item_unit_price": "4,21EUR",
+                        "invoice_item_unit_type": "Adet"
+                    },
+                    {
+                        "invoice_item_commodity_code": "961511000000",
+                        "invoice_item_country_of_origin": "Turkey",
+                        "invoice_item_description": "DAILY TAC",
+                        "invoice_item_no": "104",
+                        "invoice_item_package_quantity": "20",
+                        "invoice_item_product_id": "PYFMDQG325IY",
+                        "invoice_item_quantity": "20",
+                        "invoice_item_total_amount": "84,20EUR",
+                        "invoice_item_unit_price": "4,21EUR",
+                        "invoice_item_unit_type": "Adet"
+                    },
+                    {
+                        "invoice_item_commodity_code": "961511000000",
+                        "invoice_item_country_of_origin": "Turkey",
+                        "invoice_item_description": "GIRLS SHINE TOKA",
+                        "invoice_item_no": "105",
+                        "invoice_item_package_quantity": "50",
+                        "invoice_item_product_id": "PYHN1JTA25IY",
+                        "invoice_item_quantity": "50",
+                        "invoice_item_total_amount": "210,50EUR",
+                        "invoice_item_unit_price": "4,21EUR",
+                        "invoice_item_unit_type": "Adet"
+                    }
+                ]
+            }
+        ],
+        "valid": "true",
+        "page": 7
+    },
+    {
+        "data": [
+            {
+                "invoice_currency": "EUR",
+                "invoice_customer_address": "Üniversiteler Mahallesi Dumlupınar 
+Bulvarı No:51 Çankaya/Ankara",
+                "invoice_customer_country": "Türkiye",
+                "invoice_customer_name": "GÜMRÜK VE TİCARET BAKANLIĞI",
+                "invoice_date": "31.05.2025",
+                "invoice_delivery_term": "FOB",
+                "invoice_id": "EXP2025000000363",
+                "invoice_payment_term": "1 EUR = 43.6858 TRY",
+                "invoice_po_number": "961511000000",
+                "invoice_shipment_country_of_origin": "Türkiye",
+                "invoice_supplier_address": "Abkhazia/Georgia, Sukhum, 57 
+Kogoniya St GURCISTAN Sohum 34000 Gürcistan",
+                "invoice_supplier_country": "Türkiye",
+                "invoice_supplier_name": "INDIVIDUAL ENTREPRENEUR (IE) DZHOPUA 
+R.A.",
+                "invoice_supplier_vkn": "1460415308",
+                "invoice_total_amount": "23.382,45 EUR",
+                "invoice_total_package_quantity": "1.275.199,42 TL",
+                "invoice_total_quantity": "29.190,25 EUR",
+                "invoice_total_gross_weight": "485,00",
+                "invoice_total_net_weight": "400,00",
+                "items": [
+                    {
+                        "invoice_item_commodity_code": "961511000000",
+                        "invoice_item_country_of_origin": "Türkiye",
+                        "invoice_item_description": "GIRLS OCEAN TOKA",
+                        "invoice_item_no": "106",
+                        "invoice_item_package_quantity": "50,00",
+                        "invoice_item_product_id": "PYR9829V25IY",
+                        "invoice_item_quantity": "210,50 EUR",
+                        "invoice_item_total_amount": "4,21 EUR",
+                        "invoice_item_unit_price": "4,21 EUR",
+                        "invoice_item_unit_type": "Adet"
+                    },
+                    {
+                        "invoice_item_commodity_code": "961511000000",
+                        "invoice_item_country_of_origin": "Türkiye",
+                        "invoice_item_description": "GIRLS MERMAID TOKA",
+                        "invoice_item_no": "107",
+                        "invoice_item_package_quantity": "25,00",
+                        "invoice_item_product_id": "PYWX2T5525IY",
+                        "invoice_item_quantity": "131,50 EUR",
+                        "invoice_item_total_amount": "5,26 EUR",
+                        "invoice_item_unit_price": "5,26 EUR",
+                        "invoice_item_unit_type": "Adet"
+                    },
+                    {
+                        "invoice_item_commodity_code": "961519000000",
+                        "invoice_item_country_of_origin": "Türkiye",
+                        "invoice_item_description": "LEILA SAC BANDI",
+                        "invoice_item_no": "108",
+                        "invoice_item_package_quantity": "20,00",
+                        "invoice_item_product_id": "PY8E056F25IY",
+                        "invoice_item_quantity": "84,20 EUR",
+                        "invoice_item_total_amount": "4,21 EUR",
+                        "invoice_item_unit_price": "4,21 EUR",
+                        "invoice_item_unit_type": "Adet"
+                    },
+                    {
+                        "invoice_item_commodity_code": "961519000000",
+                        "invoice_item_country_of_origin": "Türkiye",
+                        "invoice_item_description": "VIOLETA TOKA",
+                        "invoice_item_no": "109",
+                        "invoice_item_package_quantity": "28,00",
+                        "invoice_item_product_id": "PYIHNIPP25IY",
+                        "invoice_item_quantity": "117,88 EUR",
+                        "invoice_item_total_amount": "4,21 EUR",
+                        "invoice_item_unit_price": "4,21 EUR",
+                        "invoice_item_unit_type": "Adet"
+                    }
+                ]
+            }
+        ],
+        "valid": "true",
+        "page": 8
+    }
+]
